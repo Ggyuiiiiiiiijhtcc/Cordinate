@@ -1,0 +1,24 @@
+﻿<Window x:Class="CordinateMoveRectangle.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CordinateMoveRectangle"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid> 
+        <Label FontSize="45" Margin="0,0,0,0">X -</Label>
+        <TextBox Name="cor_x" Text="" Width="120" Height="50" FontSize="25" Margin="70,10,610,374"/>
+        <Label FontSize="45" Margin="0,50,0,0">Y -</Label>
+        <TextBox Name="cor_y" Text="" Width="120" Height="50" FontSize="25" Margin="70,65,610,319"/>
+        <Canvas>
+            <Rectangle Name="rec" Width="50" Height="50" Fill="Blue" Canvas.Left="{Binding ElementName=cor_x, Path=Text}" Canvas.Top="{Binding ElementName=cor_y, Path=Text}"></Rectangle>
+        </Canvas>
+    </Grid>
+
+
+
+
+
+
+</Window>
